@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Header Clone</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* ===== HEADER ===== */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #131921;
+    padding: 8px 20px;
+    color: white;
+  }
+
+  /* ===== LEFT SECTION ===== */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .deliver {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .deliver span {
+    display: block;
+    font-weight: bold;
+  }
+
+  /* ===== SEARCH BAR ===== */
+  .search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 700px;
+    margin: 0 20px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .search-select {
+    background-color: #f3f3f3;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .search-input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .search-btn {
+    background-color: #febd69;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+
+  .search-btn:hover {
+    background-color: #f3a847;
+  }
+
+  .search-btn i {
+    color: #333;
+    font-size: 18px;
+  }
+
+  /* ===== RIGHT SECTION ===== */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .lang, .account, .returns, .cart {
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .account span, .returns span {
+    display: block;
+    font-weight: bold;
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .cart i {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  /* ===== SUBNAV ===== */
+  .subnav {
+    background-color: #232f3e;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 20px;
+    color: white;
+  }
+
+  .subnav-item {
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .subnav-item:hover {
+    text-decoration: underline;
+  }
+
+  .menu-icon {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR TOP ===== -->
+<div class="navbar">
+  <div class="navbar-left">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+    </div>
+    <div class="deliver">
+      Deliver to<br><span>Bangladesh</span>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <select class="search-select">
+      <option>All</option>
+    </select>
+    <input type="text" class="search-input" placeholder="Search Amazon">
+    <button class="search-btn"><i class="fa fa-search"></i></button>
+  </div>
+
+  <div class="navbar-right">
+    <div class="lang">
+      🇺🇸 EN
+    </div>
+    <div class="account">
+      Hello, sign in<br><span>Account & Lists</span>
+    </div>
+    <div class="returns">
+      Returns<br><span>& Orders</span>
+    </div>
+    <div class="cart">
+      <i class="fa fa-shopping-cart"></i> Cart
+    </div>
+  </div>
+</div>
+
+<!-- ===== SUBNAV BAR ===== -->
+<div class="subnav">
+  <div class="subnav-item"><i class="fa fa-bars menu-icon"></i>All</div>
+  <div class="subnav-item">Today's Deals</div>
+  <div class="subnav-item">Registry</div>
+  <div class="subnav-item">Prime Video</div>
+  <div class="subnav-item">Gift Cards</div>
+  <div class="subnav-item">Customer Service</div>
+  <div class="subnav-item">Sell</div>
+</div>
+
+<!-- ===== Font Awesome Icons ===== -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- ===== JS (Optional) ===== -->
+<script>
+  document.querySelector('.search-btn').addEventListener('click', function() {
+    const query = document.querySelector('.search-input').value;
+    alert('Searching for: ' + query);
+  });
+</script>
+
+</body>
+</html>
